@@ -1,11 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Projeto sobre UX e acessibilidade com foco em interfaces inclusivas e usáveis."
+    />
+    <meta name="theme-color" content="#0f172a" />
+    <title>UX e acessibilidade</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+
+    <header class="hero" id="inicio">
+      <nav class="topbar" aria-label="Navegação principal">
+        <a class="brand" href="#inicio">Acessibilidade UX</a>
+        <ul class="nav-links">
+          <li><a href="#principios">Princípios</a></li>
+          <li><a href="#checklist">Checklist</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero-content">
+        <p class="eyebrow">Design inclusivo</p>
+        <h1>UX e acessibilidade: desenvolvendo interfaces inclusivas</h1>
+        <p class="lead">
+          Criamos experiências que funcionam para todos, respeitando diferentes
+          necessidades, contextos e formas de interação.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#checklist">Ver checklist</a>
+          <a class="button button-secondary" href="#contato">Fale conosco</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo-principal">
+      <section class="section" id="principios" aria-labelledby="principios-title">
+        <div class="section-heading">
+          <p class="eyebrow">Fundamentos</p>
+          <h2 id="principios-title">Princípios que guiam cada decisão</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Clareza</h3>
+            <p>Informações objetivas, linguagem simples e rotas de navegação fáceis.</p>
+          </article>
+          <article class="card">
+            <h3>Consistência</h3>
+            <p>Padrões previsíveis reduzem esforço cognitivo e ajudam na compreensão.</p>
+          </article>
+          <article class="card">
+            <h3>Contraste</h3>
+            <p>Textos e elementos visuais com contraste adequado aumentam a legibilidade.</p>
+          </article>
+          <article class="card">
+            <h3>Teclado</h3>
+            <p>Toda função essencial deve ser acessível sem depender do mouse.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="checklist" aria-labelledby="checklist-title">
+        <div class="section-heading">
+          <p class="eyebrow">Prática</p>
+          <h2 id="checklist-title">Checklist de acessibilidade</h2>
+        </div>
+
+        <ul class="checklist">
+          <li>Usar títulos e hierarquia semântica correta.</li>
+          <li>Garantir contraste suficiente entre texto e fundo.</li>
+          <li>Adicionar texto alternativo em imagens relevantes.</li>
+          <li>Oferecer foco visível em links, botões e campos.</li>
+          <li>Manter formulários claros e com instruções precisas.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p class="eyebrow">Perguntas</p>
+          <h2 id="faq-title">Perguntas frequentes</h2>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Por que acessibilidade faz parte do UX?</summary>
+            <p>
+              Porque uma experiência bem pensada serve melhor a todos os usuários,
+              incluindo pessoas com diferentes limitações físicas, cognitivas e sensoriais.
+            </p>
+          </details>
+          <details>
+            <summary>Como começar a aplicar esses conceitos?</summary>
+            <p>
+              Comece com estrutura semântica, navegação simples, contraste adequado e
+              validação com teclado e leitores de tela.
+            </p>
+          </details>
+          <details>
+            <summary>Quais ferramentas ajudam a validar a acessibilidade?</summary>
+            <p>
+              Ferramentas como Lighthouse, axe e testes manuais com teclado são excelentes
+              pontos de partida.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="contato" aria-labelledby="contato-title">
+        <div class="section-heading">
+          <p class="eyebrow">Contato</p>
+          <h2 id="contato-title">Receba dicas práticas</h2>
+        </div>
+
+        <form class="contact-form" novalidate>
+          <label for="name">Nome</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+
+          <label for="interest">Seu interesse</label>
+          <select id="interest" name="interest">
+            <option value="">Selecione uma opção</option>
+            <option value="curso">Curso</option>
+            <option value="consultoria">Consultoria</option>
+            <option value="mentoria">Mentoria</option>
+          </select>
+
+          <button class="button button-primary" type="submit">Enviar</button>
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Acessibilidade UX. Todos os direitos reservados.</p>
+    </footer>
+  </body>
 </html>
